@@ -12,8 +12,10 @@
   </div>
   <div class="chat-container">
     <div class="chat-header">
-      <h2 style="margin: 0; font-size: 1.2em;">ChatGPT UI</h2>
+      <!-- <h2 style="margin: 0; font-size: 1.2em;">ChatGPT UI</h2> -->
       <button id="new-chat-btn" style="padding: 6px 16px; border-radius: 16px; border: none; background: #eee; color: #222; cursor: pointer;">New Chat</button>
+      <!-- Add this button near your chat header -->
+      <button id="reminder-btn" class="reminder-btn">Make a Reminder</button>
     </div>
     <div class="chat-messages" id="chat-messages"></div>
     <form class="chat-input" id="chat-form" autocomplete="off">
@@ -34,6 +36,22 @@
       <button type="submit">Send</button>
     </form>
   </div>
+  <!-- Add this modal at the end of <body> -->
+  <div id="reminder-modal" class="reminder-modal">
+    <div class="reminder-modal-content">
+      <span class="reminder-close" id="reminder-close">&times;</span>
+      <h2>Set a Reminder</h2>
+      <form id="reminder-form">
+        <label for="reminder-task">Task</label>
+        <input type="text" id="reminder-task" required placeholder="What should I remind you?">
+        <label for="reminder-datetime">Date & Time</label>
+        <input type="datetime-local" id="reminder-datetime" required>
+        <button type="submit" class="reminder-set-btn">Set Reminder</button>
+      </form>
+    </div>
+  </div>
+  <!-- Add this notification area -->
+  <div id="reminder-notification" class="reminder-notification"></div>
  <script src="script.js"></script>
 </body>
 </html>

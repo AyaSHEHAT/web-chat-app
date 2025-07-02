@@ -270,6 +270,66 @@ fileUploadInput.addEventListener('change', async function () {
   }
 });
 
+// Reminder Modal Logic
+const reminderBtn = document.getElementById('reminder-btn');
+const reminderModal = document.getElementById('reminder-modal');
+const reminderClose = document.getElementById('reminder-close');
+const reminderForm = document.getElementById('reminder-form');
+const reminderTask = document.getElementById('reminder-task');
+const reminderDatetime = document.getElementById('reminder-datetime');
+const reminderNotification = document.getElementById('reminder-notification');
+
+// Show modal
+reminderBtn.addEventListener('click', () => {
+  reminderModal.style.display = 'flex';
+  reminderTask.value = '';
+  reminderDatetime.value = '';
+  setTimeout(() => reminderTask.focus(), 200);
+});
+
+// Hide modal
+reminderClose.addEventListener('click', () => {
+  reminderModal.style.display = 'none';
+});
+window.addEventListener('click', (e) => {
+  if (e.target === reminderModal) reminderModal.style.display = 'none';
+});
+
+// Handle reminder form submit
+reminderForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const task = reminderTask.value.trim();
+  const datetime = reminderDatetime.value;
+  if (!task || !datetime) return;
+
+  // Calculate ms until reminder
+  const remindAt = new Date(datetime);
+  const now = new Date();
+  const ms = remindAt - now;
+  if (ms <= 0) {
+    showReminderNotification("⏰ Please choose a future time!");
+    return;
+  }
+
+  // Confirm to user
+  appendMessage('bot', `🔔 Reminder set for <b>${remindAt.toLocaleString()}</b>: ${task}`);
+  reminderModal.style.display = 'none';
+
+  // Schedule notification
+  setTimeout(() => {
+    showReminderNotification(`🔔 <b>Reminder:</b> ${task} <br><span style="font-size:0.9em;">(${remindAt.toLocaleString()})</span>`);
+  }, ms);
+});
+
+// Show notification
+function showReminderNotification(msg) {
+  reminderNotification.innerHTML = msg;
+  reminderNotification.style.display = 'block';
+  setTimeout(() => {
+    reminderNotification.style.display = 'none';
+  }, 8000);
+}
+
 // Initialize with one chat session
 function init() {
   const firstSession = {

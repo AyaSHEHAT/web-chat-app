@@ -4,7 +4,7 @@ A modern, interactive web chat application powered by OpenAI GPT-4o Mini and DAL
 - **Multi-session chat** (sidebar with chat history)
 - **Model selection** (GPT-4o Mini for chat, DALL·E 3 for image generation)
 - **File upload** (for fine-tuning or context)
-- **AI-powered reminders** (with email notifications via OpenAI Agent SDK)
+- **AI-powered reminders** (with email notifications via OpenAI Agent SDK or in-app notifications)
 - **Modern, responsive UI**
 
 ---
@@ -14,7 +14,9 @@ A modern, interactive web chat application powered by OpenAI GPT-4o Mini and DAL
 - **Chat with AI:** Natural conversation using GPT-4o Mini.
 - **Image Generation:** Use DALL·E 3 to generate images from prompts.
 - **File Upload:** Upload `.jsonl` files for fine-tuning or context.
-- **Reminders:** Ask the AI to remind you of tasks at specific times—get notified by email!
+- **Reminders:** 
+  - Ask the AI to remind you of tasks at specific times—get notified by email (backend) or in-app notification (frontend modal).
+  - Click the **Make a Reminder** button for a modern modal popup to set reminders.
 - **Multi-Session:** Sidebar to switch between previous chats.
 - **Modern UI:** Responsive, clean, and user-friendly design.
 
@@ -22,9 +24,7 @@ A modern, interactive web chat application powered by OpenAI GPT-4o Mini and DAL
 
 ## 📸 Screenshots
 
-![Chat UI Screenshot](./screenshots/chat-ui.png)
-![Sidebar Screenshot](./screenshots/sidebar.png)
-![Reminder Screenshot](./screenshots/reminder.png)
+> _Add screenshots of your UI here for best presentation!_
 
 ---
 
@@ -85,9 +85,11 @@ Then visit [http://localhost:8000](http://localhost:8000) or the shown port.
 - **Chat:** Type your message and click **Send**.
 - **Switch Model:** Use the dropdown to select GPT-4o Mini (chat) or DALL·E 3 (image).
 - **Upload File:** Click the 📁 icon, select a `.jsonl` file, and ask questions about its content.
-- **Reminders:** Type a message like  
-  `Please remind me to drink water on 07/01/2025 11:25:55`  
-  and receive an email at the specified time.
+- **Reminders:** 
+  - Type a message like  
+    `Please remind me to drink water on 07/01/2025 11:25:55`  
+    and receive an email at the specified time (backend).
+  - Or click **Make a Reminder** for a modern modal, set your task and time, and get an in-app notification.
 - **Sidebar:** Click previous chats to revisit or continue conversations.
 - **New Chat:** Click **New Chat** to start a fresh session.
 
@@ -104,7 +106,8 @@ web-chat-app/
 ├── reminder-agent.js  # Node.js backend for reminders & secure API
 ├── .env               # (Not committed) API keys and email credentials
 ├── .gitignore         # Ignores .env and node_modules
-└── README.md          # This file
+├── README.md          # This file
+└── instructions.txt   # Full chat-based project instructions and history
 ```
 
 ---
@@ -124,6 +127,12 @@ OPENAI_API_KEY=sk-...your-openai-key...
 EMAIL_USER=your_gmail@gmail.com
 EMAIL_PASS=your_gmail_app_password
 ```
+
+---
+
+## 📚 Project Instructions & History
+
+See [`instructions.txt`](./instructions.txt) for a full log of the chat-based development process, including all user requests and assistant responses.
 
 ---
 
