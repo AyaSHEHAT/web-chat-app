@@ -1,3 +1,5 @@
+// const { log } = require("console");
+
 const chatMessages = document.getElementById('chat-messages');
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
@@ -6,7 +8,8 @@ const chatList = document.getElementById('chat-list');
 const modelSelect = document.getElementById('model-select');
 const fileUploadInput = document.getElementById('file-upload');
 const fileUploadLabel = document.querySelector('.file-upload-label');
-const apiKey = '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'; // <-- Replace with your API key
+//const apiKey = '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'; // <-- Replace with your API key
+const apiKey = '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'; // <-- Replace with your API key
 
 // Array of chat sessions, each session is {id, title, conversation}
 let chatSessions = [];
@@ -87,11 +90,12 @@ async function sendMessage(message) {
             ...session.conversation.slice(0, -1),
             { role: 'user', content: promptToSend }
           ],
-          max_tokens: 200
+          max_tokens: 50
         })
       });
 
       if (!response.ok) {
+        console.log(`Error: ${response.status} ${response.statusText}`);
         throw new Error('API error');
       }
 
@@ -129,7 +133,7 @@ async function sendMessage(message) {
           model: 'dall-e-3',
           prompt: message,
           n: 1,
-          size: '1024x1024'
+          size: '256x256'
         })
       });
 

@@ -19,6 +19,8 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+console.log('Loaded OpenAI Key:', process.env.OPENAI_API_KEY ? 'YES' : 'NO');
+
 // Helper: parse reminder request using OpenAI
 async function parseReminder(text) {
   const prompt = `Extract the reminder task and datetime from this message:\n"${text}"\nReturn as JSON: { "task": "...", "datetime": "YYYY-MM-DD HH:mm:ss" }`;
