@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h3>Chats</h3>
+    <ul class="chat-list" id="chat-list"></ul>
+  </div>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2 style="margin: 0; font-size: 1.2em;">ChatGPT UI</h2>
+      <button id="new-chat-btn" style="padding: 6px 16px; border-radius: 16px; border: none; background: #eee; color: #222; cursor: pointer;">New Chat</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <form class="chat-input" id="chat-form" autocomplete="off">
+      <!-- Add the file upload icon and input inside the chat-input form, before the text input -->
+      <label for="file-upload" class="file-upload-label" title="Upload file">
+        <svg width="22" height="22" viewBox="0 0 20 20" fill="none" style="vertical-align: middle;cursor:pointer;">
+          <path d="M7 10V14C7 15.1046 7.89543 16 9 16H11C12.1046 16 13 15.1046 13 14V10" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M10 2V12" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 6L10 2L14 6" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="file" id="file-upload" style="display:none" />
+      </label>
+      <input type="text" id="user-input" placeholder="Type your message..." required />
+      <select id="model-select">
+        <option value="gpt-4o-mini">GPT-4o Mini</option>
+        <option value="dall-e-3">DALL·E 3</option>
+      </select>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>
