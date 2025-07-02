@@ -22,10 +22,10 @@ A modern, interactive web chat application powered by OpenAI GPT-4o Mini and DAL
 
 ## 📸 Screenshots
 
-![Chat UI Screenshot](./screenshots/chat-ui.png)
-![Sidebar Screenshot](./screenshots/sidebar.png)
-![Reminder Screenshot](./screenshots/reminder.png)
-
+![Chat UI Screenshot](![image](https://github.com/user-attachments/assets/2098a7f6-c902-4fb7-a635-219e36cd30c8)
+)
+![Sidebar Screenshot](![image](https://github.com/user-attachments/assets/4d9e07b1-4c4f-4578-99b0-01a598682cbc)
+)
 ---
 
 ## 🛠️ Setup & Installation
