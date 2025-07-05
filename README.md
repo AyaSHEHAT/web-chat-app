@@ -24,7 +24,16 @@ A modern, interactive web chat application powered by OpenAI GPT-4o Mini and DAL
 
 ## 📸 Screenshots
 
-> _Add screenshots of your UI here for best presentation!_
+![WhatsApp Image 2025-07-02 at 15 54 58_5697e9d9](https://github.com/user-attachments/assets/239d9749-6609-4a93-87a3-f4676a2379eb)
+![WhatsApp Image 2025-07-02 at 16 38 36_9ac8a415](https://github.com/user-attachments/assets/cc2040f8-ae1c-43b1-9e7b-67a443fa224d)
+![WhatsApp Image 2025-07-02 at 16 00 57_b4bb6c6a](https://github.com/user-attachments/assets/aaf458fb-67ec-4c49-b71b-dd8584b9f593)
+![WhatsApp Image 2025-07-02 at 15 59 40_00e1daa7](https://github.com/user-attachments/assets/4219ae1b-898c-445b-89af-9dbfa121069b)
+![WhatsApp Image 2025-07-02 at 15 58 31_a84fe6bf](https://github.com/user-attachments/assets/00b474a8-64b7-466a-aa3c-bebeafed939e)
+![WhatsApp Image 2025-07-02 at 15 56 15_ae0dfe62](https://github.com/user-attachments/assets/8a8085b5-2612-493d-94cd-19d1d2743aaa)
+![WhatsApp Image 2025-07-02 at 15 55 49_369b7787](https://github.com/user-attachments/assets/bca86673-d689-4354-8086-f913371271bd)
+![WhatsApp Image 2025-07-02 at 15 54 58_5697e9d9](https://github.com/user-attachments/assets/e73df66c-d3f5-4707-ac73-22276cc35293)
+
+
 
 ---
 
